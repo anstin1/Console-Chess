@@ -49,14 +49,20 @@ console_chess/
 
 ### Using CMake (Recommended)
 1. Ensure you have CMake (>=3.10) and a C++17-compatible compiler installed.
-2. In the project root, run:
-   ```sh
-   mkdir build
-   cd build
-   cmake ..
-   cmake --build .
+2. In the project root, run these commands:
+   ```bash
+   # Configure the project (generates build files)
+   cmake -S . -B build
+   
+   # Build the project in Release configuration
+   cmake --build build --config Release
    ```
-3. The executable `ConsoleChess` will be created in the `build` directory.
+3. The executable `ConsoleChess.exe` will be created in the `build/Release` directory.
+
+**Alternative one-liner:**
+```bash
+cmake -S . -B build && cmake --build build --config Release
+```
 
 ### Using Visual Studio
 - Open `Chess.sln` in Visual Studio 2017 or later and build the solution.
